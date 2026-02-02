@@ -19,6 +19,6 @@ This project exists to provide:
 
 Just:
 
-> run → fix → done
+> run → fix → done  [Run as Administrator or it wont work!]
 
 If this repository saves you hours of frustration, then it has done exactly what it was created for
