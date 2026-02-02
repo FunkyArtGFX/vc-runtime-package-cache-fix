@@ -23,3 +23,57 @@ Just:
 > run → fix → done  [Run as Administrator or it wont work!]
 
 If this repository saves you hours of frustration, then it has done exactly what it was created for
+
+--------------------------------------------------------------------------------------------------------------
+
+
+## How It Works
+
+This script repairs a broken Microsoft Visual C++ Package Cache by restoring only the installer files that Windows expects to find.
+
+### 1. Downloading the official VC++ redistributable
+
+The script downloads the official Microsoft Visual C++ 2015–2022 Redistributable directly from Microsoft.  
+No third-party installers or modified files are used.
+
+### 2. Extracting the required MSI files
+
+Instead of running the installer, the script uses Microsoft’s supported `/layout` option to extract the real MSI files:
+
+- `vc_runtimeMinimum_x64.msi`
+- `vc_runtimeAdditional_x64.msi`
+
+These are the exact files Windows Installer requires for repair, update, or uninstall operations.
+
+### 3. Detecting existing Package Cache entries
+
+Windows stores installer metadata in:
+
+C:\ProgramData\Package Cache
+
+Each Visual C++ installation is identified by a unique GUID and a version folder such as `v14.xx.xxxxx`.
+
+The script scans all existing entries to locate where Windows expects the missing files.
+
+### 4. Restoring missing cache files
+
+For each detected Visual C++ entry, the script recreates missing folder structures and restores the required MSI files under:
+
+- `vcRuntimeMinimum_amd64`
+- `vcRuntimeAdditional_amd64`
+
+Only missing files are added. Existing files are not modified.
+
+### 5. Completing the repair
+
+Once the files are restored, Windows Installer can successfully complete its repair process, allowing applications and installers to run normally again.
+
+### Why this is safe
+
+- Uses official Microsoft downloads only  
+- Does not modify the registry  
+- Does not alter system binaries  
+- Restores files originally created by Windows Installer  
+
+In short, the script does not modify Visual C++ itself.  
+It restores the installer state that Windows lost.
