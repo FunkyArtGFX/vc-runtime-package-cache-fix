@@ -7,6 +7,7 @@ REM ==================================================
 REM Fixes missing vc_runtimeMinimum_x64.msi /
 REM vc_runtimeAdditional_x64.msi errors
 REM on Windows 10 / 11 systems.
+REM Version: 1.0
 REM
 REM Typical error:
 REM "The path C:\ProgramData\Package Cache\{GUID}\v14.xx.xxxxx\..."
@@ -79,3 +80,4 @@ echo ▶ that previously failed.
 echo.
 
 pause
+
