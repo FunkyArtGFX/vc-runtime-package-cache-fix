@@ -1,8 +1,8 @@
 ![Visual C++ Package Cache error example](Error-example.png)
-# UNIVERSAL vc-runtime-package-cache-fix
+UNIVERSAL vc-runtime-package-cache-fix
 Easy 1-Click Fix for broken Microsoft Visual C++ Package Cache on Windows 10/11
 
-## 🤯 Why This Exists
+Why This Exists
 
 After hours of searching for a quick and reliable fix, I found that no clear solution existed for this issue.
 Most guides were outdated, incomplete, or overly complicated — and none worked consistently.
@@ -10,7 +10,7 @@ Common recommendations included reinstalling Visual C++, repairing Windows or ed
 
 After encountering this issue multiple times across different systems, I decided to stop wasting time and create a single, automated, one-click solution that actually works.
 
-### 🎯 The Goal
+The Goal
 
 This project exists to provide:
 - one simple script
@@ -22,8 +22,8 @@ Just:
 
 > run → fix → done  [Run as Administrator or it wont work!]
 
-If this repository saves you hours of frustration, then it has done exactly what it was created for
 
+If this repository saves you hours of frustration, then it has done exactly what it was created for
 
 
 --------------------------------------------------------------------------------------------------------------
